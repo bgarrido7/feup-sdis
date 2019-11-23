@@ -12,8 +12,7 @@ All the course's information can be viewed [here](https://sigarra.up.pt/feup/pt/
 * **João Costa** - [Costamista](https://github.com/Costamista)
 
 ## apagar isto depois
-relatórios de anos passados:
-https://www.dropbox.com/sh/vkdb48t9lckvp6d/AAB3fJOsyJ6nER1njaJpCzYUa?dl=0
+relatórios de anos passados [here](https://www.dropbox.com/sh/vkdb48t9lckvp6d/AAB3fJOsyJ6nER1njaJpCzYUa?dl=0)
 
 dropbox do Truppel c/ codigo [here](https://www.dropbox.com/sh/mg5b5oo45e1lwwo/AADy7uzV0HDPmoA7vf3Vi2EWa/5%20Ano/SDIS?dl=0&subfolder_nav_tracking=1)
 
