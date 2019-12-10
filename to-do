@@ -8,3 +8,7 @@
 ->testar arquiteturas hibridas (threads + event)?
 
 ->usar timestamps para tempo inicial e final e fazer o calculo à pata
+
+perguntas:
+->fazer priority queue depois da FIFO em event based
+->em event based usar nr fixo de threads, quantas? e comparar com quantas de thread based?
