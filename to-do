@@ -1,8 +1,9 @@
-->testar em hdd e ssd
-
-->usar timestamps para tempo inicial e final e fazer o calculo à pata
-
 objetivo:
 -> usar multi core e comparar arquitetura thread based, com uma arquitetura hibrida (só com 1 thread pool)
 
 *em relção à hibrida, ha um nr ideal de threads a usar na event pool (é 8 ou qql coisa assim) [fazer um teste com isso] 
+->testar em hdd vs. ssd
+
+->usar timestamps para tempo inicial e final e fazer o calculo à pata
+
+->testar com pedidos na cache e com pedidos ao disco (ver se dá para limpar a cache)
