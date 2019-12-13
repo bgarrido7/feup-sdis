@@ -1,17 +1,8 @@
--->eventos vs threads (usar operaço só com 1 thread para comparaçao ser justa )[java]
-(ver packages de java disponiveis)
-
-->testar grande variedade de ficheiros
-
 ->testar em hdd e ssd
-
-->testar arquiteturas hibridas (threads + event)?
 
 ->usar timestamps para tempo inicial e final e fazer o calculo à pata
 
-opções:
-->fazer só 1 core e comparar thread com event
--> usar multi core e comparar arquitetura só com cores, com uma arquitetura hibrida
+objetivo:
+-> usar multi core e comparar arquitetura thread based, com uma arquitetura hibrida
 
-*em relção à hibrida, ha um nr ideal de threads a usar na event pool (é 8 ou qql coisa assim)
-testar isso e depois usar o nr ideal para comparar as arquiteturas
+*em relção à hibrida, ha um nr ideal de threads a usar na event pool (é 8 ou qql coisa assim) [fazer um teste com isso] 
