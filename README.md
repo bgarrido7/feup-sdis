@@ -15,4 +15,4 @@ Client-Server arquitecture with concurrent requests, essencially testing **Threa
 
 ## Informação Util
 
-(http://tutorials.jenkov.com/java-concurrency/index.html)
+http://tutorials.jenkov.com/java-concurrency/index.html
