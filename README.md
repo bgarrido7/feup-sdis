@@ -13,6 +13,10 @@ Client-Server arquitecture with concurrent requests, essencially testing **Threa
 * **Diogo Santos** - [dfosantos](https://github.com/dfosantos)
 * **João Costa** - [Costamista](https://github.com/Costamista)
 
+## Informação Util
+
+(http://tutorials.jenkov.com/java-concurrency/index.html)
+
 ## apagar isto depois
 relatórios de anos passados [here](https://www.dropbox.com/sh/vkdb48t9lckvp6d/AAB3fJOsyJ6nER1njaJpCzYUa?dl=0)
 
