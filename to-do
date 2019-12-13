@@ -5,6 +5,8 @@ NOTA: ha varios tipos de arquiteturas baseadas em eventos, ver no seda esses tip
 *em relção à hibrida, ha um nr ideal de threads a usar na event pool (é 8 ou qql coisa assim) [fazer um teste com isso] 
 ->em thread based, as threads sao apagadas dps de usadas; em event driven, as threas estão smp na thread pool, mas sao usadas ou nao
 
+(onde entra o blocking / non-blocking ?)
+
 ->testar em hdd vs. ssd
 
 ->usar timestamps para tempo inicial e final e fazer o calculo à pata
