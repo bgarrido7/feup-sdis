@@ -1,5 +1,6 @@
 //this is the server
 
+//javac *.java && java Target 5000
 import java.io.*;
 import java.net.*;
 
