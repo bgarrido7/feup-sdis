@@ -1,3 +1,6 @@
+//HOW TO COMPILE & RUN
+//javac *.java && java Client localhost 5000
+
 import java.io.*;
 import java.net.*;
 import java.lang.*;
