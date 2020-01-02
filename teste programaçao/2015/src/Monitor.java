@@ -1,5 +1,7 @@
 //this is the client
 
+//HOW TO COMPILE & RUN
+//javac *.java && java Target 5000
 
 import java.lang.*;
 import java.io.*;
