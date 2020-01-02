@@ -23,14 +23,13 @@ public class Monitor{
     public Monitor(String addr, int port, int period, int timeout){
         try {
             mnt = new Socket(addr, port);
-
+            //in = new DataInputStream(skt.getInputStream());
             in = new DataInputStream(new BufferedInputStream(mnt.getInputStream()) );
             out = new DataOutputStream(mnt.getOutputStream());
 
             timer = new Timer();
             RemindTask rmd = new RemindTask(timeout);
             timer.schedule(rmd, 0, period);
-          //  mnt.setSoTimeout(timeout);
         }
 
         catch(IOException e){
