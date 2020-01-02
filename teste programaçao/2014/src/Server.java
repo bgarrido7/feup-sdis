@@ -1,3 +1,6 @@
+//HOW TO COMPILE & RUN
+//javac *.java && java Server 5000 9.389
+
 import java.io.*;
 import java.net.*;
 
