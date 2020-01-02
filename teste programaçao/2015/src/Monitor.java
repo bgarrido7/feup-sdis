@@ -1,7 +1,7 @@
 //this is the client
 
 //HOW TO COMPILE & RUN
-//javac *.java && java Target 5000
+//javac *.java && java Monitor localhost 5000 3000 1000
 
 import java.lang.*;
 import java.io.*;
