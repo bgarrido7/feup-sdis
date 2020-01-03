@@ -6,7 +6,7 @@
 
 * **diogo:** criação da estrutura base dos servidores
 
-----objetivo:---
+# objetivo
 * usar multi core e comparar arquitetura thread based, com uma arquitetura hibrida (só com 1 thread pool)
 **NOTA:** ha varios tipos de arquiteturas baseadas em eventos, ver no seda esses tipos e escolher 1 (ou tentar testar mais? prob not) 
 
