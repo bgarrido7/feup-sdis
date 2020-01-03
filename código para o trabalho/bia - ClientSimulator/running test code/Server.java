@@ -6,12 +6,14 @@ import java.io.*;
 import java.net.*;
 
 public class Server {
+
     private static int port = 5000;
 
     private ServerSocket ss;
     private Socket srv;
-    private DataInputStream in;
-    private DataOutputStream out;
+    private InputStream in;
+    private OutputStream out;
+    private String currentDirectory = System.getProperty("user.dir");
 
     public static void main(String args[]){
         new Server();
@@ -19,33 +21,31 @@ public class Server {
 
     public Server(){
         try {
+            int i=0;
             ss = new ServerSocket(port);
             System.out.println("Waiting for the client request...");
+            File file = new File(currentDirectory + "/file/pp-2015.pdf");
+
             while(true){
-                //só para teste
+                 //só para teste
                 Thread.sleep(3000); //espera 3s
 
                 Socket srv = ss.accept();
-                in = new DataInputStream(srv.getInputStream());
-                out = new DataOutputStream(srv.getOutputStream());
+                in = new FileInputStream(file);
+                out = srv.getOutputStream();
 
-                String msg = in.readUTF();
-                System.out.println("Message Received: " + msg);
-
-                if(msg.equals("EXIT"))
-                    break;
-                else {
-                    System.out.println("Message Sent: Hi Client " + msg);
-                    out.writeUTF("Hi Client " + msg);
-                    in.close();
-                    out.close();
-                    srv.close();
+                byte[] bytes = new byte[16*1024];
+                int count;
+                while ((count = in.read(bytes)) > 0) {
+                    out.write(bytes, 0, count);
                 }
-
-
+                System.out.println("file sent!");
+                in.close();
+                out.close();
+                srv.close();
             }
-            System.out.println("Shutting down Socket server!!");
-            ss.close();
+         //   System.out.println("Shutting down Socket server!!");
+         //   ss.close();
 
         }
         catch(IOException | InterruptedException e) {
