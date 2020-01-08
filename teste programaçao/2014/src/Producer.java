@@ -1,51 +1,49 @@
 import java.io.*;
 import java.net.*;
-import java.lang.*;
 import java.util.ArrayList;
-import java.util.List;
 
-public class Producer {
-
+class Producer{
+    private InetAddress addr;
     private DatagramSocket skt;
     private DatagramPacket pkt;
-    private InetAddress group;
-    private byte[] buf;
+    byte[] sendData = new byte[1024];
 
-    private float avg=0;
-    private static float sum=0;
+    public static void main(String args[]){
 
-    public static void main(String args[]) {
-        List<Float> val = new ArrayList<>();
+        ArrayList<Float> val = new ArrayList<Float>();
 
-        for (int i=2; i<args.length; i++) {
-            val.add(Float.parseFloat(args[i]));
-            sum+=Float.parseFloat(args[i]);
-        }
+        for(int i=2; i<args.length; i++)
+            val.add(Float.parseFloat( args[i]) );
+
         new Producer(args[0], Integer.parseInt(args[1]), val);
     }
 
-    public Producer(String addr, int port, List<Float> val){
-
-        avg = sum/val.size();
-        try {
-         //   Thread.sleep(1000);
-
-            group = InetAddress.getByName(addr);
+    public Producer(String adress, int port, ArrayList<Float> val){
+       
+       try{
+            
             skt = new DatagramSocket();
 
-            avg = sum / val.size();
-            buf = Float.toString(avg).getBytes();
+            for(int i=0; i<val.size(); i++){
+                sendData = String.valueOf(val.get(i)).getBytes();
+                
+                addr = InetAddress.getByName(adress);
+                pkt = new DatagramPacket(sendData, sendData.length, addr, port);
+                
+                skt.send(pkt);
+                System.out.println("sent data: " + val.get(i));
+                Thread.sleep(1000);
+            }
 
-            pkt = new DatagramPacket(buf, buf.length, group, port);
-
-            skt.send(pkt);
-            System.out.println("data sent!");
-
-            skt.close();
         }
-        catch(IOException /*| InterruptedException*/ e){
+    
+        catch(IOException | InterruptedException e){
             System.out.println(e);
         }
+    
+    
     }
 
+
 }
+
